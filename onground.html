@@ -95,25 +95,9 @@
         .return-button:hover {
             color: #1f7a8c;
         }
-        .countdown-container {
-            text-align: center;
-            margin-top: 50px;
-        }
-        .countdown {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-        .end-season {
-            font-size: 24px;
-        }
     </style>
 </head>
 <body>
-    <div class="countdown-container">
-        <div class="countdown" id="countdown"></div>
-        <div class="end-season">(Koniec sezonu)</div>
-    </div>
-    
     <div class="container">
         <h1>Topka Na Ziemi</h1>
         <table>
@@ -139,28 +123,5 @@
     </div>
 
     <button class="return-button" onclick="window.location.href='https://gtagpl.github.io';">Powrót</button>
-
-    <script>
-        // Obliczanie i wyświetlanie odliczania do 16 marca 2024
-        var countdownDate = new Date("Mar 16, 2024 00:00:00").getTime();
-
-        var countdownFunction = setInterval(function() {
-            var now = new Date().getTime();
-            var distance = countdownDate - now;
-
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
-
-            if (distance < 0) {
-                clearInterval(countdownFunction);
-                document.getElementById("countdown").innerHTML = "SEZON ZAKOŃCZONY";
-            }
-        }, 1000);
-    </script>
 </body>
 </html>
