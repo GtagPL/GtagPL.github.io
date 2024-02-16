@@ -41,6 +41,11 @@
         .category-title {
             color: #000; /* Czarny kolor tekstu */
         }
+        .countdown {
+            color: #fff;
+            font-size: 24px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -48,6 +53,31 @@
         <h1 class="category-title">Wybierz kategorię</h1>
         <a href="./onground.html" class="category-link">Na Ziemi</a>
         <!-- Tutaj możesz dodać więcej linków do innych kategorii -->
+
+        <div class="countdown" id="countdown"></div>
     </div>
+
+    <script>
+        // Obliczanie i wyświetlanie odliczania do 16 marca 2024
+        var countdownDate = new Date("Mar 16, 2024 00:00:00").getTime();
+
+        var countdownFunction = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countdownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "SEZON ZAKOŃCZONY";
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
