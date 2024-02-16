@@ -3,17 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gtag PL</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-2o1NTPwixXHimOJ7zfaQ32tKP26dKZ04/uR5smvr/lmoFPe5aA0aLZAgJp0ytkjB" crossorigin="anonymous">
+    <title>Strona Główna</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1a1a2e; /* ciemno niebieskie tło */
-            color: #fff;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
-            position: relative;
         }
         .container {
             max-width: 800px;
@@ -22,98 +18,33 @@
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            text-align: center;
         }
         h1 {
             color: #333;
-            text-align: center;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background-color: #3498db; /* kolor tła tabeli */
-            border-radius: 5px;
-        }
-        th, td {
+        .category-link {
+            display: block;
+            margin: 20px auto;
             padding: 15px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
+            width: 200px;
             background-color: #1f7a8c;
             color: #fff;
-        }
-        td {
-            background-color: #fff;
-            color: #333;
-        }
-        .toggle-button {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 40px; 
-            height: 40px; 
-            padding: 0; 
-            text-align: center;
-            background-color: #7289da;
-            color: #fff;
             text-decoration: none;
-            border-radius: 50%;
-            font-size: 20px; 
-            cursor: pointer;
-            z-index: 999;
-            line-height: 40px; 
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
         }
-        .toggle-button:hover {
-            background-color: #677bc4;
-        }
-        .discord-footer {
-            text-align: center;
-            margin-top: 50px;
-            color: #fff;
-            cursor: pointer;
-        }
-        .discord-footer:hover {
-            text-decoration: underline;
+        .category-link:hover {
+            background-color: #126476;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Topka on Ground</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Pozycja</th>
-                    <th>Nick</th>
-                    <th>Czas</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td><a href="https://www.youtube.com/watch?v=aEqKLyHM1lc">Miaek</a></td> <!-- Dodany link -->
-                    <td>11:25</td>
-                </tr>
-            </tbody>
-        </table>
+        <h1>Wybierz kategorię</h1>
+        <a href="./onground.html" class="category-link">On Ground</a>
+        <!-- Tutaj możesz dodać więcej linków do innych kategorii -->
     </div>
-
-    <div class="discord-footer" onclick="window.location.href='https://discord.gg/ft6CX7Qjtt';">
-        Discord
-    </div>
-
-    <script>
-        function toggleTheme() {
-            var body = document.body;
-            if (body.classList.contains('dark-theme')) {
-                body.classList.remove('dark-theme');
-                body.style.backgroundColor = '#f0f2f5';
-            } else {
-                body.classList.add('dark-theme');
-                body.style.backgroundColor = '#1a1a2e';
-            }
-        }
-    </script>
 </body>
 </html>
