@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gtag PL</title>
+    <title>GTag PL</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-2o1NTPwixXHimOJ7zfaQ32tKP26dKZ04/uR5smvr/lmoFPe5aA0aLZAgJp0ytkjB" crossorigin="anonymous">
     <style>
@@ -95,23 +95,27 @@
         .return-button:hover {
             color: #1f7a8c;
         }
+        .countdown-container {
+            text-align: center;
+            margin-top: 50px;
+        }
         .countdown {
             font-size: 36px;
-            text-align: center;
-            margin-top: 20px;
+            margin-bottom: 10px;
         }
         .end-season {
             font-size: 24px;
-            text-align: center;
-            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <button class="return-button" onclick="window.location.href='https://gtagpl.github.io';">Powrót</button>
+    <div class="countdown-container">
+        <div class="countdown" id="countdown"></div>
+        <div class="end-season">(Koniec sezonu)</div>
+    </div>
     
     <div class="container">
-        <h1>Topka Po Ziemi</h1>
+        <h1>Topka Na Ziemi</h1>
         <table>
             <thead>
                 <tr>
@@ -134,8 +138,7 @@
         Discord
     </div>
 
-    <div class="countdown" id="countdown"></div>
-    <div class="end-season">(Koniec sezonu)</div>
+    <button class="return-button" onclick="window.location.href='https://gtagpl.github.io';">Powrót</button>
 
     <script>
         // Obliczanie i wyświetlanie odliczania do 16 marca 2024
