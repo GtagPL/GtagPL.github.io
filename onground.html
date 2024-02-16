@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gtag PL</title>
+    <title>GTag PL</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-2o1NTPwixXHimOJ7zfaQ32tKP26dKZ04/uR5smvr/lmoFPe5aA0aLZAgJp0ytkjB" crossorigin="anonymous">
     <style>
@@ -22,6 +22,7 @@
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            position: relative;
         }
         h1 {
             color: #333;
@@ -55,10 +56,10 @@
             height: 40px; 
             padding: 0; 
             text-align: center;
-            background-color: #7289da;
+            background-color: transparent; /* Usunięcie tła */
             color: #fff;
             text-decoration: none;
-            border-radius: 50%;
+            border: none;
             font-size: 20px; 
             cursor: pointer;
             z-index: 999;
@@ -72,13 +73,33 @@
             margin-top: 50px;
             color: #fff;
             cursor: pointer;
+            background-color: transparent; /* Usunięcie tła */
+            border: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
         }
         .discord-footer:hover {
             text-decoration: underline;
+            color: #ddd; /* Zmiana koloru tekstu po najechaniu */
+        }
+        .return-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #3498db;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .return-button:hover {
+            color: #1f7a8c;
         }
     </style>
 </head>
 <body>
+    <button class="return-button" onclick="window.location.href='https://gtagpl.github.io';">Powrót</button>
+    
     <div class="container">
         <h1>Topka Po Ziemi</h1>
         <table>
