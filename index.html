@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GTag PL</title>
+    <title>Strona Główna</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #1a1a2e; /* Ciemny kolor tła */
             margin: 0;
             padding: 0;
+            color: #fff; /* Biały kolor tekstu */
         }
         .container {
             max-width: 800px;
@@ -19,9 +20,6 @@
             border-radius: 10px;
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
             text-align: center;
-        }
-        h1 {
-            color: #fff; /* Biały kolor tekstu */
         }
         .category-link {
             display: block;
@@ -38,23 +36,37 @@
         .category-link:hover {
             background-color: #126476;
         }
-        .category-title {
-            color: #000; /* Czarny kolor tekstu */
+        .countdown-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1a1a2e;
+            padding: 10px 0;
+            text-align: center;
         }
         .countdown {
-            color: #fff;
             font-size: 24px;
-            margin-top: 20px;
+        }
+        .end-season {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .category-title {
+            color: #000; /* Czarny kolor tekstu */
         }
     </style>
 </head>
 <body>
+    <div class="countdown-container">
+        <div class="countdown" id="countdown"></div>
+        <div class="end-season">(Koniec sezonu)</div>
+    </div>
+    
     <div class="container">
         <h1 class="category-title">Wybierz kategorię</h1>
-        <a href="./onground.html" class="category-link">Na Ziemi</a>
+        <a href="./onground.html" class="category-link">Po Ziemi</a>
         <!-- Tutaj możesz dodać więcej linków do innych kategorii -->
-
-        <div class="countdown" id="countdown"></div>
     </div>
 
     <script>
